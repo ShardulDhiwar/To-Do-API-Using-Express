@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Buy groceries",
+    "description": "Purchase milk, bread, and vegetables from the supermarket",
+    "completionStatus": false
+  },
+  {
+    "id": 2,
+    "title": "Complete assignment",
+    "description": "Finish the Express.js To-Do API project",
+    "completionStatus": false
+  },
+  {
+    "id": 3,
+    "title": "Workout",
+    "description": "Do a 30-minute workout session",
+    "completionStatus": true
+  },
+  {
+    "id": 4,
+    "title": "Call mom",
+    "description": "Check in and talk to mom in the evening",
+    "completionStatus": false
+  }
+]
