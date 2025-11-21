@@ -52,34 +52,21 @@ const updateTask = (req, res) => {
 
     res.status(200).json({
         message: "Task status Updated",
-        updatedTask: tasks.find(t => t.id == id)
     });
 };
 
 
 const deleteTask = (req, res) => {
     const { id } = req.params;
-    const updates = req.body;
+    const task = tasks.find(t => t.id == id);
 
-    const task = tasks.find(task => task.id == id);
     if (!task) {
-        return res.status(404).json({ message: "Task not found" });
+        return res.status(404).json({ message: "task not found" });
     }
 
-    tasks = tasks.map((each) => {
-        if (each.id == id) {
-            return {
-                ...each,
-                ...updates,
-            }
-        }
-        return each;
-    });
+    tasks = tasks.filter(t => t.id != id);
 
-    res.status(200).json({
-        message: "Task status Updated",
-        updatedTask: tasks.find(t => t.id == id)
-    });
+    res.status(200).json({ message: "task deleted successfully" });
 };
 
 module.exports = {
